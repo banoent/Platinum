@@ -7,7 +7,11 @@ public class CMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //11
+
+        //22
+
+
     }
 
     // Update is called once per frame
