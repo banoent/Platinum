@@ -140,7 +140,7 @@ public partial class CCameraFollwBasic : MonoBehaviour
     }
 
 
-    private void LateUpdate()
+    private void FixedUpdate()
     {
         
         if(_target == null || _camTr == null)

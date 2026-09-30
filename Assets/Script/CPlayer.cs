@@ -58,10 +58,12 @@ public class CPlayer : MonoBehaviour
     void Update()
     {
         InputMove();
-        CheckGround();       
+        CheckGround();
+
+        
     }
 
-    private void FixedUpdate()
+    private void LateUpdate()
     {
         Move();
         TryJump();
@@ -146,8 +148,6 @@ public class CPlayer : MonoBehaviour
         {
             return;
         }
-
-
                      
         Vector3 velocity = rb.velocity;
         velocity.y = _jumpForce;
@@ -206,7 +206,6 @@ public class CPlayer : MonoBehaviour
             return;
         }
 
-        // 현재 바라보는 방향에서 목표 방향으로 부드럽게 회전
         Quaternion targerRot = Quaternion.LookRotation(moveDir, Vector3.up);
 
         transform.rotation = Quaternion.Slerp
