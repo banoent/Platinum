@@ -1,9 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CItem : MonoBehaviour
 {
+    #region ¿ŒΩ∫∆Â≈Õ
+    [SerializeField] private CItemData _itemData;
+
+    #endregion
+
     private void OnTriggerEnter(Collider other)
     {
         CInventory inventory = other.GetComponent<CInventory>();
@@ -13,7 +16,7 @@ public class CItem : MonoBehaviour
             return;
         }
 
-        inventory.AddPotionInInventory();
+        inventory.AddItem(_itemData);
 
         Destroy(gameObject);
     }

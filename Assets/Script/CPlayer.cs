@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class CPlayer : MonoBehaviour
 {
@@ -24,7 +20,9 @@ public class CPlayer : MonoBehaviour
 
     [Header("체력")]
     [SerializeField] private float _maxHp = 100f;
-    
+
+    [Header("테스트")]
+    [SerializeField] private float _testDamage = 20f;
     #endregion
 
 
@@ -36,6 +34,12 @@ public class CPlayer : MonoBehaviour
     private Transform _cameraTr;
     private Vector3 moveDir = Vector3.zero;
     private float _currentHp;
+
+    #endregion
+
+    #region 프로퍼티
+    public float CurrentHp => _currentHp;
+    public float MaxHp => _maxHp;
 
     #endregion
 
@@ -60,7 +64,7 @@ public class CPlayer : MonoBehaviour
         InputMove();
         CheckGround();
 
-        
+        TestDamage();
     }
 
     private void LateUpdate()
@@ -70,15 +74,44 @@ public class CPlayer : MonoBehaviour
     }
 
 
-    public void Heal(float value)
+    public void Heal(float heal_amount)
     {
-        _currentHp += value;
+        float beforeHp = _currentHp;
+        _currentHp += heal_amount;
 
         if (_currentHp > _maxHp)
         {
             _currentHp = _maxHp;
         }
-           
+
+        CPrint.Log($"HP 회복 : {beforeHp} → {_currentHp}");
+
+    }
+
+    public void TakeDamage(float value)
+    {
+        _currentHp -= value;
+
+        if (_currentHp < 0f)
+        {
+            _currentHp = 0f;
+        }
+
+        CPrint.Log($"플레이어 데미지 : {value}");
+        CPrint.Log($"현재 HP : {_currentHp} / {_maxHp}");
+    }
+
+    private void TestDamage()
+    {
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            TakeDamage(_testDamage);
+        }
+    }
+
+    public bool CanHeal()
+    {
+        return _currentHp < _maxHp;
     }
 
     private void InputMove()
