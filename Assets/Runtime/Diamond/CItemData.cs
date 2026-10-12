@@ -1,10 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu
-    (
-    fileName = "ItemData",
-    menuName = "Item/ItemData"
-    )
+[CreateAssetMenu(fileName = "ItemData", menuName = "Item/ItemData")
 ]
 public class CItemData : ScriptableObject
 {
