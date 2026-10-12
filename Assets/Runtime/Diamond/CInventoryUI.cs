@@ -97,6 +97,7 @@ public class CInventoryUI : MonoBehaviour
     public void SelectItem(CItemData itemData)
     {
         _selectedItem = itemData;
+        CPrint.Log($"{itemData.ItemName} º±≈√");
         ShowItemInfo(itemData);
     }
 

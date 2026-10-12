@@ -31,10 +31,7 @@ public class CInventorySlotUI : MonoBehaviour
         _countText.text = $"x {item.Count}";
 
         _button.onClick.RemoveAllListeners();
-        _button.onClick.AddListener
-        (
-            OnClickSlot
-        );
+        _button.onClick.AddListener(OnClickSlot);
     }
 
 
