@@ -10,6 +10,7 @@ public class CPlayer : MonoBehaviour
     [SerializeField] private float _rotateSharpness = 12.0f;
     [SerializeField] private float _runSpeed = 8.0f;
 
+    [SerializeField] private CPlayerWallet _wallet;
 
     [Header("¶¥")]
     [SerializeField] private LayerMask _groundLayer = default;
@@ -250,5 +251,12 @@ public class CPlayer : MonoBehaviour
             );
 
 
+    }
+
+    private void OnGUI()
+    {
+        GUIStyle gui = new GUIStyle();
+        gui.fontSize = 40;
+        GUI.Box(new Rect(50f, 50f, 300f, 150f), $"Coin : {_wallet.Coin}", gui);
     }
 }
