@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33690299a1a63f94aa8a3f55ee9aa5cb, type: 3}
-  m_Name: Potion_Data
+  m_Script: {fileID: 11500000, guid: c57357eab8b23d24d9ff035f849ed5b0, type: 3}
+  m_Name: ShopProductData
   m_EditorClassIdentifier: 
-  _itemID: GM09
-  _itemName: Heal
-  _itemIcon: {fileID: 21300000, guid: a4aa365c56b9caa4a80e7b2795a118bc, type: 3}
-  _description: Healing HP 30
-  _healAmount: 30
+  _productID: Red_Potion
+  _itemData: {fileID: 11400000, guid: d56a2417941c21a4cb84debf331da09d, type: 2}
+  _price: 10

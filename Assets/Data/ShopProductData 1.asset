@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c57357eab8b23d24d9ff035f849ed5b0, type: 3}
+  m_Name: ShopProductData 1
+  m_EditorClassIdentifier: 
+  _productID: Poison
+  _itemData: {fileID: 11400000, guid: 7b9fb78e31fc59e46b94aefd5f9ab917, type: 2}
+  _price: 10
