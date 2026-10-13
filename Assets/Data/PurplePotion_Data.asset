@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33690299a1a63f94aa8a3f55ee9aa5cb, type: 3}
   m_Name: PurplePotion_Data
   m_EditorClassIdentifier: 
-  _itemID: GM09
+  _itemID: GM09_Poison
   _itemName: Poison
   _itemIcon: {fileID: 21300000, guid: 969ed34503e95fc4db0a0202ad01c3ff, type: 3}
   _description: Damage HP 30

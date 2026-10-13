@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33690299a1a63f94aa8a3f55ee9aa5cb, type: 3}
   m_Name: RedPotion_Data
   m_EditorClassIdentifier: 
-  _itemID: GM09
+  _itemID: GM09_RedPotion
   _itemName: Heal
   _itemIcon: {fileID: 21300000, guid: a4aa365c56b9caa4a80e7b2795a118bc, type: 3}
   _description: Healing HP 30
